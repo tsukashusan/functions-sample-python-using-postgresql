@@ -9,6 +9,7 @@
     "DATABASE": "<DATABASE>",
     "USER" : "<USER>",
     "PASSWORD": "<PASSWORD>",
-    "connectionString": "<connectionString>"
+    "connectionString": "<connectionString>",
+    "eventHubName" : "<eventHubName>"
   }
 }
