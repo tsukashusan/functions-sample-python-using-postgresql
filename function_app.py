@@ -17,7 +17,7 @@ def test_function(myhub: func.EventHubEvent):
     event = json.loads(myhub.get_body().decode('utf-8'))
     dbi.open_pool()
     sql = f'INSERT INTO public.{TARGET_TABLE_NAME}(sensor_id, sensor_temp, sensor_humidity, sensor_status, sensor_sentdatetime) VALUES (%s, %s, %s, %s, %s)'
-    param = (event['sensor_id'], event['sensor_temp'], event['sensor_temp'], f"{event['sensor_status']}", f"{event['sensor_sentdatetime']}")
+    param = (event['sensor_id'], event['sensor_temp'], event['sensor_humidity'], f"{event['sensor_status']}", f"{event['sensor_sentdatetime']}")
     ret = dbi.write(sql, param)
     logging.info(ret)
     logging.info('Python EventHub trigger processed an event: %s',
