@@ -9,6 +9,7 @@
     "DATABASE": "<DATABASE>",
     "USER" : "<USER>",
     "PASSWORD": "<PASSWORD>",
+    "TARGET_TABLE_NAME": "<TARGET_TABLE_NAME>",
     "connectionString": "<connectionString>",
     "eventHubName" : "<eventHubName>"
   }
